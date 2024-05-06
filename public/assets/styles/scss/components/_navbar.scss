@@ -1,0 +1,24 @@
+._navbar {
+    &_wrapper {
+        display: flex;
+        align-items: center;
+        padding-top: 4.6rem;
+        padding-bottom: 4.6rem;
+        justify-content: space-between;
+    }
+
+    &_brand {
+        display: flex;
+    }
+
+    &_links {
+        gap: 0.8rem;
+        display: flex;
+    }
+
+    &_link {
+        color: $green;
+        padding: 1rem;
+        font-size: $_link_h2;
+    }
+}

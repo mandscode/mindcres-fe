@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $Onest;
+    font-size: $_typo_h2;
+    color: $body-default-color;
+    line-height: $_typo_h2_line;
+    background-color: $body-default;
+    font-feature-settings: "lnum", "pnum";
+    
+    &[page="colors"] {
+        // background-color: $body-light;
+    }
+}
+
+._container_block {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 6rem;
+    max-width: 160rem;
+}
+
+._container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $wide;
+    
+    @include for-wide {
+        padding: 0 6rem;
+        max-width: 129rem;
+    }
+    
+    @include for-tablet {
+        padding: 0 2rem;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
