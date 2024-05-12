@@ -1,29 +1,31 @@
-import { FETCH_DATA_FAILURE, FETCH_DATA_REQUEST, FETCH_DATA_SUCCESS } from "./actionTypes";
+import { FETCH_PRODUCT_DETAILS_FAILURE, FETCH_PRODUCT_DETAILS_REQUEST, FETCH_PRODUCT_DETAILS_SUCCESS } from "./actionTypes";
 
-export const fetchDataRequest = () => ({
-    type: FETCH_DATA_REQUEST,
+import baseAPI from "../../API/baseAPI";
+import endPoints from "../../API/endPoints"
+
+export const fetchProductsDetailRequest = () => ({
+    type: FETCH_PRODUCT_DETAILS_REQUEST,
 });
   
-export const fetchDataSuccess = (data) => ({
-    type: FETCH_DATA_SUCCESS,
+export const fetchProductsDetailSuccess = (data) => ({
+    type: FETCH_PRODUCT_DETAILS_SUCCESS,
     payload: data,
 });
   
-export const fetchDataFailure = (error) => ({
-    type: FETCH_DATA_FAILURE,
+export const fetchProductsDetailFailure = (error) => ({
+    type: FETCH_PRODUCT_DETAILS_FAILURE,
     payload: error,
 });
-  
 
-export const fetchData = () => {
+
+export const fetchProductsDetail = () => {
     return async (dispatch) => {
-        dispatch(fetchDataRequest());
+        dispatch(fetchProductsDetailRequest());
         try {
-            const response = await fetch("http://localhost:8081/products");
-            const data = await response.json();
-            dispatch(fetchDataSuccess(data));
+            const response = await baseAPI.get(`/${endPoints.PRODUCT_BASIC_DETAILS.fetchProductDetails}`);
+            dispatch(fetchProductsDetailSuccess(response.data));
         } catch (error) {
-            dispatch(fetchDataFailure(error.message));
+            dispatch(fetchProductsDetailFailure(error.message));
         }
     };
 };

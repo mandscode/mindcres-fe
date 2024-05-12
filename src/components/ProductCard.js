@@ -3,8 +3,6 @@ import AmazonBuyButton from "./utilities/AmazonBuyButton";
 import FlipkartBuyButton from "./utilities/FlipkartBuyButton";
 
 const ProductCard = ({product}) => {
-    
-    console.log(product)
 
     return (
         <>
@@ -15,9 +13,9 @@ const ProductCard = ({product}) => {
                 <div className="_product_card_body">
                     <div className="_product_card_info">
                         <div className="_product_card_info_text">
-                            <Link to={`/product-detail/${product._id}`}>
+                            <Link to={`/product-detail/${product.productId}`}>
                                 <h6>
-                                    {product.name} 
+                                    {product.productName}
                                 </h6>
                             </Link>
                             <p>
@@ -25,8 +23,8 @@ const ProductCard = ({product}) => {
                             </p>
                         </div>
                         <div className="_product_card_info_price">
-                            <span className="_product_card_info_price_mrp">{product.price}</span>
-                            <span className="_product_card_info_price_offer">$<span>{product.sale_price}</span></span>
+                            <span className="_product_card_info_price_mrp">{product.defaultPrice}</span>
+                            <span className="_product_card_info_price_offer">$<span>{product.currentPrice}</span></span>
                         </div>
                     </div>
                     <div className="_product_card_buttons">

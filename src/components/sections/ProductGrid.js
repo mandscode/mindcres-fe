@@ -2,8 +2,8 @@ import ProductCard from "../ProductCard";
 import { useSelector } from 'react-redux';
 
 const ProductGrid = ({title}) => {
-    let products = useSelector(state => state?.data?.data?.products)
-
+    let products = useSelector(state => state?.productsDetail?.data?.productsList)
+    
     return (
         <>
             <section className="_product-grid">

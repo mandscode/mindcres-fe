@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import ProductSupportOverview from "../ProductSupportOverview";
 
 
@@ -81,6 +82,16 @@ const ProductSupportSection = () => {
             ]
         }
     ]
+
+
+    const sectionRefs = useRef([]);
+
+  
+    const scrollToSection = (index) => {
+        sectionRefs.current[index].scrollIntoView({ behavior: 'smooth' });
+    };
+  
+
     return (
         <>
             <section className="_product-support">
@@ -90,23 +101,23 @@ const ProductSupportSection = () => {
                             SnoreQuit Product Support
                         </h1>
                         <ul className="_product-support_nav">
-                            <li className="_product-support_nav_item">
+                            <li className="_product-support_nav_item" onClick={() => scrollToSection(0)}>
                             Tips to get started
                             </li>
-                            <li className="_product-support_nav_item">
+                            <li className="_product-support_nav_item" onClick={() => scrollToSection(1)}>
                             Mouthpiece sizing guide
                             </li>
-                            <li className="_product-support_nav_item">
+                            <li className="_product-support_nav_item" onClick={() => scrollToSection(2)}>
                             Mouthpiece care & Replacement
                             </li>
-                            <li className="_product-support_nav_item">
+                            {/* <li className="_product-support_nav_item" onClick={() => scrollToSection(3)}>
                             Free Tips for better sleep
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div className="_product-support_body">
                         {faq && faq.map((section, index) => (
-                            <div className="_product-support-overview" key={index}>
+                            <div className="_product-support-overview" ref={ref => sectionRefs.current[index] = ref} key={index}>
                                 <ProductSupportOverview content={section}/>
                             </div>
                         ))}

@@ -1,16 +1,16 @@
 import { useState } from "react";
 import Accordion from "../Accordion";
 
-export const Tab = ({ item, visibleTab, setVisibleTab }) => (
+export const Tab = ({ tab, visibleTab, setVisibleTab }) => (
     <span
-      onClick={() => setVisibleTab(item.id)}
-      className={visibleTab === item.id ? "_tab_title _tab_title--active" : "_tab_title"}
+      onClick={() => setVisibleTab(tab._tabId)}
+      className={visibleTab === tab._tabId ? "_tab_title _tab_title--active" : "_tab_title"}
     >
-      {item.tabTitle}
+      {tab.tabName}
     </span>
 );
 
-export const TabContent = ({ item, visibleTab }) => {
+export const TabContent = ({ tab, visibleTab, faqEntries }) => {
 
     const [active, setActive] = useState(null);
     const handleToggle = (i) => {
@@ -22,41 +22,24 @@ export const TabContent = ({ item, visibleTab }) => {
     }
 
     return (
-        
-        <div style={visibleTab === item.id ? {} : { display: 'none' }} className="_tab_desc">
-          {
-            item?.tabContent.length > 0 ?
-            item?.tabContent && item?.tabContent.map((descCat, index) => (
-                <div className="_tab_desc_cat" key={index}>
-                    {
-                        descCat?.heading ? 
-                        <h4 className="_tab_desc_cat_title _sub_h2">{descCat?.heading}</h4>
-                        :
-                        null
-                    }
-                    {
-                      descCat?.desc.length > 0 ? 
-                        <div className="_tab_desc_cat_body">
-                            {
-                                descCat?.desc && descCat.desc.map((desc, i) => (
-                                    <div key={i} className="_tab_desc_cat_body_faq">
-                                        {
-                                            desc.text ?
-                                                <Accordion active={active} handleToggle={handleToggle} faq={desc} />
-                                            :
-                                            null
-                                        }
-    
-                                    </div>
-                                ))
-                            }
-                        </div>
-                      :
-                      null  
-                    }
-                </div>
-            )) : null
-          }
+        <div className="_tab_desc" style={visibleTab === tab._tabId ? {} : { display: 'none' }}>
+            {
+                tab?.sections?.length > 0 ? 
+                tab?.sections && tab?.sections?.map((section, index) => (
+                    <div className="_tab_desc_cat" key={index}>
+                        <h4 className="_tab_desc_cat_title _sub_h2">{section.sectionName}</h4>
+                        {
+                            faqEntries.filter(entry => entry.associatedTabs.includes(tab._tabId) && entry.sections.includes(section.sectionCode)).map(entry => (
+                                <div key={entry._id} className="_tab_desc_cat_body_faq">
+                                    <Accordion active={active} handleToggle={handleToggle} faq={entry} />
+                                </div>
+                            ))
+                        }
+                    </div>
+                ))
+                :
+                null
+            }
         </div>
     )
 };

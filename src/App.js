@@ -1,8 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Index from "./pages/Index";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchData } from "./redux/actions/actions";
 import { useEffect } from "react";
 import Footer from "./components/Footer";
 import Shop from "./pages/Shop";
@@ -13,13 +11,21 @@ import WhySnore from "./pages/WhySnore";
 import AboutUs from "./pages/AboutUs";
 import ProductDetail from "./pages/ProductDetail";
 import ProductSupport from "./pages/ProductSupport";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProductDetail } from "./redux/actions/fetchProductDetail";
+import { fetchFAQentries } from "./redux/actions/fetchFAQentries";
+import { fetchProductContent } from "./redux/actions/fetchProductContent";
+import { fetchTabDetails } from "./redux/actions/fetchTabDetails";
 
 function App() {
   const dispatch = useDispatch();
-  const { data, loading, error } = useSelector((state) => state.data);
+  const { data, loading, error } = useSelector((state) => state.productsDetail);
 
   useEffect(() => {
-    dispatch(fetchData());
+    dispatch(fetchFAQentries());
+    dispatch(fetchProductContent());
+    dispatch(fetchTabDetails());
+    dispatch(fetchProductDetail())
   }, [dispatch]);
 
   if (loading) return <div>Loading...</div>;
@@ -39,7 +45,7 @@ function App() {
         <Route path="/why-snore" element={<WhySnore/>}/>
         <Route path="/about-us" element={<AboutUs/>}/>
         <Route path="/product-support" element={<ProductSupport/>}/>
-        <Route path="/product-detail/:productId" element={<ProductDetail/>}/>
+        <Route path="/product-detail/:pId" element={<ProductDetail/>}/>
       </Routes>
       <Footer/>
     </>

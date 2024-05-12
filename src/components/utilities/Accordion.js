@@ -2,17 +2,18 @@ import { useRef } from "react";
 
 const Accordion = (props) => {
     const contentEl = useRef();
-    const { handleToggle, active, faq } = props;
+    const { handleToggle, active, faq, page } = props;
 
 
 
     return (
         <>
-            <div className={`_tab_desc_cat_body_title_wrapper ${active === faq.title ? 'active' : ''}`} onClick={() => handleToggle(faq.title)}>
-                <h6 className="_tab_desc_cat_body_title">{faq.title}</h6>
+        <div className={`${page ? page : ''}`}>
+            <div className={`_tab_desc_cat_body_title_wrapper ${active === faq.question ? 'active' : ''}`} onClick={() => handleToggle(faq.question)}>
+                <h6 className="_tab_desc_cat_body_title">{faq.question}</h6>
             
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" style={
-                        active === faq.title
+                        active === faq.question
                         ? { transform:'rotate(0deg)'}
                         : { transform: 'rotate(180deg)' }
                     }>
@@ -20,14 +21,15 @@ const Accordion = (props) => {
                     </svg>
             </div>
             <div ref={contentEl} className={`_tab_desc_cat_body_text`} style={
-                active === faq.title
+                active === faq.question
                     ? { height: contentEl.current.scrollHeight }
                     : { height: "0px", }
             }>
                 <p style={{paddingTop:'36px'}}>
-                    {faq.text}
+                    {faq.answer}
                 </p>
             </div>
+        </div>
         </>
     )
 }

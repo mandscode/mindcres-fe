@@ -51,11 +51,36 @@
 
     &._whysnore {
         ._hero {
-
+            
             &_wrapper {
                 display: flex;
                 height: fit-content;
                 justify-content: end;
+            }
+            
+            &_info {
+                width: fit-content;
+                padding: 3rem 2.5rem;
+                background-color: $rosy-brown-500;
+            }
+
+            &_title {
+                font-size: 4.6rem;
+                line-height: 3.6rem;
+            }
+
+            &_strap {
+                display: none;
+            }
+        }
+    }
+
+    &._aboutus {
+        ._hero {
+            &_wrapper {
+                display: flex;
+                height: fit-content;
+                justify-content: start;
             }
             
             &_info {

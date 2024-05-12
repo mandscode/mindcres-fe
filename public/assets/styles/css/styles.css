@@ -1633,6 +1633,23 @@ a {
 ._hero._whysnore ._hero_strap {
   display: none;
 }
+._hero._aboutus ._hero_wrapper {
+  display: flex;
+  height: fit-content;
+  justify-content: start;
+}
+._hero._aboutus ._hero_info {
+  width: fit-content;
+  padding: 3rem 2.5rem;
+  background-color: #FFF9EC;
+}
+._hero._aboutus ._hero_title {
+  font-size: 4.6rem;
+  line-height: 3.6rem;
+}
+._hero._aboutus ._hero_strap {
+  display: none;
+}
 
 ._snoring_solutions_wrapper {
   display: flex;
@@ -1834,7 +1851,16 @@ a {
   display: flex;
   margin: 0 auto;
 }
+._detailed_productCard_title {
+  color: #005B4C;
+}
+._detailed_productCard_title_wrapper {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
 ._detailed_productCard_media {
+  min-width: 57rem;
   width: 57rem;
   height: auto;
   padding: 1rem;
@@ -2184,6 +2210,7 @@ a {
 }
 ._product-overview_media_key-points {
   display: flex;
+  padding-top: 13.5rem;
   justify-content: space-between;
 }
 ._product-overview_desc {
@@ -2281,7 +2308,7 @@ a {
 ._product-overview_why-sizes {
   gap: 3.5rem;
   display: flex;
-  padding: 11.5rem 0 13.5rem;
+  padding: 11.5rem 0 0;
   flex-direction: column;
 }
 ._product-overview_why-sizes_title {
@@ -2305,6 +2332,37 @@ a {
 ._product-overview_why-sizes_key-points {
   list-style-type: disc;
   list-style-position: inside;
+}
+
+._faq-section_wrapper {
+  gap: 7.3rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 19rem;
+}
+._faq-section_wrapper ._product-detail {
+  display: grid;
+  row-gap: 2.5rem;
+  column-gap: 8.6rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+._faq-section_wrapper ._product-detail ._tab_desc_cat_body_title {
+  color: #BAA989;
+}
+._faq-section_wrapper ._product-detail ._tab_desc_cat_body_title_wrapper {
+  align-items: flex-start;
+}
+._faq-section_wrapper ._product-detail ._tab_desc_cat_body_title_wrapper svg {
+  min-width: 2.4rem;
+}
+._faq-section_wrapper ._product-detail ._tab_desc_cat_body_title_wrapper svg path {
+  stroke: #BAA989;
+}
+._faq-section_wrapper ._product-detail ._tab_desc_cat_body_text {
+  line-height: 27px;
+}
+._faq-section_title {
+  color: #005B4C;
 }
 
 ._product-support_wrapper {

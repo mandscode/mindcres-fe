@@ -14,6 +14,7 @@ const Index = () => {
         page : "index", 
         title: "Say Goodbye to Snoring!", 
         btn : "Explore",
+        navigateTo:"/shop",
         desc : null
     }
 
@@ -33,7 +34,7 @@ const Index = () => {
                 <DetailedProductCard/>
                 <ReviewCardsSection/>
                 <ReviewVideo/>
-                <SleepSolutionsDownloadSubscribe/>
+                <SleepSolutionsDownloadSubscribe/> 
             </main>
         </>
     );

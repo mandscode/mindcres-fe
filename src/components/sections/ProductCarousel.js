@@ -5,7 +5,9 @@ import { useEffect } from "react";
 import { useSelector } from 'react-redux';
 
 const ProductCarousel = ({title}) => {
-    let products = useSelector(state => state?.data?.data?.products)
+    let products = useSelector(state => state?.productsDetail?.data?.productsList)
+
+
 
     return (
         <>

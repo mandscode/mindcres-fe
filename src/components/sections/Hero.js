@@ -1,4 +1,6 @@
-const Hero = ({page, title, btn, desc}) => {
+import { Link } from "react-router-dom";
+
+const Hero = ({page, title, btn, desc, navigateTo}) => {
     
     return (
         <>
@@ -29,9 +31,9 @@ const Hero = ({page, title, btn, desc}) => {
                         {
                             btn ? 
                             <>
-                                <button className="_button _is_primary _is_medium">
+                                <Link to="/shop" className="_button _is_primary _is_medium">
                                     {btn}
-                                </button>
+                                </Link>
                             </>
                             :
                             null
