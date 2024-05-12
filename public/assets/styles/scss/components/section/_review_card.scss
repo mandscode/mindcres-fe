@@ -1,0 +1,84 @@
+._testimonial {
+    
+    &_wrapper {
+        gap: 8.4rem;
+        display: flex;
+        padding-top: 17rem;
+        padding-bottom: 17rem;
+        flex-direction: column;
+    }
+    
+    &_info {
+        gap: 3.767rem;
+        display: flex;
+        margin: 0 auto;
+        width: fit-content;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    &_title {
+        text-align: center;
+        color: $rosy-brown;
+    }
+    
+    &_cards {
+        &_wrapper {
+            background: $light;
+            padding-top: 9rem;
+            padding-bottom: 9rem;
+        }
+    }
+    
+    &_card {
+        display: flex;
+        cursor: pointer;
+        gap: 4.963rem;
+        text-align: center;
+        padding: 2.6rem 2rem;
+        flex-direction: column;
+        background-color: $rosy-brown-600;
+        
+        &_title {
+            gap: 2rem;
+            display: grid;
+            color: $green;
+            font-weight: 700;
+            font-size: 4.6rem;
+            font-family: $Merriweather;
+        }
+
+        &_rating {
+            margin: 0 auto;
+            gap: 1.2rem;
+            display: flex;
+        }
+
+        &_review {
+            line-height: 2.3rem;
+        }
+
+        &_author {
+            color: $gray-800;
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+    }
+
+    &._product-detail {
+        ._testimonial {
+
+            &_wrapper {
+                padding-top: 14rem;
+            }
+
+            &_info {
+                flex-direction: column-reverse;
+            }
+
+            &_title {
+                color: $green;
+            }
+        }
+    }
+}

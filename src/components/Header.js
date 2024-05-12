@@ -7,17 +7,19 @@ const Header = () => {
             <header className="_navbar">
                 <div className="_container_block _navbar_wrapper">
                     <div className="_navbar_brand">
-                        <BrandLogo w={145} h={58}/>
+                        <Link to="/">
+                            <BrandLogo fill="#005B4C" w={145} h={58}/>
+                        </Link>
                     </div>
                     <div className="_navbar_links">
                         <div className="_navbar_link">
-                            <Link to="/">Why you snore?</Link>
+                            <Link to="/why-snore">Why you snore?</Link>
                         </div>
                         <div className="_navbar_link">
-                            <Link to="/">Shop</Link>
+                            <Link to="/shop">Shop</Link>
                         </div>
                         <div className="_navbar_link">
-                            <Link to="/">FAQs</Link>
+                            <Link to="/faq-s">FAQs</Link>
                         </div>
                     </div>
                 </div>

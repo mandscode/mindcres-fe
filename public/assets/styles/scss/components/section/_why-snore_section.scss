@@ -1,0 +1,71 @@
+._why-snore_section {
+    &_wrapper {
+        gap: 14.4rem;
+        display: flex;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        flex-direction: column;
+    }
+
+    &_role {
+        gap: 5.6rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_title {
+        color: $green;
+        font-size: 3.3rem;
+        text-align: center;
+        font-family: $Merriweather;
+    }
+    
+    &_des {
+        gap: 2.3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &_info {
+        gap: 5.5rem;
+        display: flex;
+        flex-direction: column;
+        
+        &_wrapper {
+            gap: 7rem;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &_media {
+        gap: 12rem;
+        display: flex;
+        flex-direction: column;
+        padding-top: 12rem;
+
+        &_wrapper {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &_buttons {
+            gap: 2rem;
+            display: flex;
+            justify-content: end;
+        }
+    }
+
+    
+    &_role {
+        gap: 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &_effects {
+        gap: 6rem;
+        display: flex;
+        flex-direction: column;
+    }
+}

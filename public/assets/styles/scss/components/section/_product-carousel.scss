@@ -1,0 +1,19 @@
+._product-carousel {
+    &_wrapper {
+        gap: 11rem;
+        display: flex;
+        padding-bottom: 17rem;
+        flex-direction: column;
+    }
+
+    &_info {
+        &_title {
+            color: $_sub-title_default_color;
+        }
+    }
+
+    &_list {
+        display: flex;
+        justify-content: space-between;
+    }
+}

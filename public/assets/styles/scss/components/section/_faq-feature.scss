@@ -1,0 +1,13 @@
+._faq-feature {
+    &_wrapper {
+        gap: 4.7rem;
+        display: flex;
+        padding-top: 8rem;
+        padding-bottom: 4.5rem;
+        flex-direction: column;
+    }
+
+    &_heading {
+        color: $green;
+    }
+}

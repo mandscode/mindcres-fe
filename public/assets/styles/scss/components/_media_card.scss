@@ -1,0 +1,29 @@
+._media_card {
+    gap: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    
+    img {
+        height: 35rem;
+        width: 43.75rem;
+        object-fit: contain;
+    }
+
+    span {
+        color: $green;
+        font-weight: 700;
+        font-size: 1.9rem;
+    }
+
+    &._product-detail {
+        max-width: 36.2rem;
+        text-align: center;
+        justify-content: center;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

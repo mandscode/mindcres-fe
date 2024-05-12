@@ -1,0 +1,46 @@
+._about_snoreQuit {
+    &_wrapper {
+        gap: 17rem;
+        display: flex;
+        padding-top: 17rem;
+        padding-bottom: 17rem;
+        flex-direction: column;
+    }
+
+    &_title {
+        text-align: center;
+        color: $rosy-brown;
+    }
+
+    &_body {
+        gap: 14rem;
+        display: flex;
+    }
+
+    &_info {
+        gap: 4.3rem;
+        display: flex;
+        flex-direction: column;
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    &_media {
+        max-width: 29rem;
+
+        img {
+
+            &:nth-child(1) {
+                width: 15.8rem;
+                height: auto;
+            }
+
+            &:nth-child(2) {
+                width: 29rem;
+                height: 11.8rem;
+            }
+        }
+    }
+}

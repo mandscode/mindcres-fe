@@ -1,0 +1,89 @@
+._about-us_section {
+    &_wrapper {
+        gap: 13rem;
+        display: flex;
+        padding-top: 8rem;
+        padding-bottom: 13rem;
+        flex-direction: column;
+    }
+
+    &_welcome {
+        gap: 7rem;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+
+        &_title {
+            color: $green;
+        }
+
+        p {
+            max-width: 87%;
+            margin: 0 auto;
+        }
+    }
+
+    &_info {
+        gap: 11rem;
+        display: flex;
+        
+        &_media {
+            gap: 2.8rem;
+            display: flex;
+            height: 30.8rem;
+            min-width: 23.3rem;
+            flex-direction: column;
+            
+            span {
+                color: #000;
+                font-size: 3.3rem; 
+                text-align: center;
+                display: block;
+                font-family: $Merriweather;   
+            }
+
+            img {
+                height: 30.8rem;
+                min-width: 23.3rem;
+                object-fit: contain;
+            }
+        }
+
+        &_title {
+            color: $rosy-brown;
+            font-family: $Merriweather;
+        }
+
+        &_typo {
+            gap: 7.5rem;
+            display: flex;
+            flex-direction: column;
+
+            p {
+                padding-left: 4.5rem;
+            }
+        }
+    }
+
+    &_typo {
+        gap: 7rem;
+        display: flex;
+        margin-top: 6rem;
+        text-align: center;
+        flex-direction: column;
+
+        &_title {
+            color: $rosy-brown;
+            font-family: $Merriweather;
+        }
+
+        p {
+            gap: 2.4rem;
+            display: flex;
+            max-width: 87%;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+    }
+    
+}

@@ -4,13 +4,16 @@
     display: flex;
     cursor: pointer;
     width: fit-content;
+    align-items: center;
     // border-radius: 5px;
     text-align: center;
     padding: 1rem 2rem;
     font-family: $Onest;
+    white-space: nowrap;
     align-items: center;
     height: fit-content;
     color: $_btn_disabled;
+    justify-content: center;
     background: transparent;
     transition: all 0.3s ease-in-out;
 
@@ -354,6 +357,42 @@
     }
 }
 
+._is_amazon {
+    border: 0;
+    color: $_btn_primary_color;
+    background-color: $_btn_primary;
+
+    svg {
+        fill: $_btn_default_color;
+    }
+
+    &:hover {
+        // border-color: transparent;
+        // // background-image: linear-gradient(to right top, #8047fe, #673de5, #4f32cc, #3628b3, #191e9b);
+        // background: linear-gradient(to right, #08C9AD 0%, #8047FE 100%);
+        color: $_btn_hover_primary_color;
+        background: $_btn_hover_primary;
+        border-color: $_btn-border_hover_primary;
+    }
+}
+
+._is_flipkart {
+    border: 0;
+    color: $green;
+    border: 1px solid $rosy-brown;
+    background-color: $rosy-brown-600;
+
+    &:hover {
+        // border-color: transparent;
+        // // background-image: linear-gradient(to right top, #8047fe, #673de5, #4f32cc, #3628b3, #191e9b);
+        // background: linear-gradient(to right, #08C9AD 0%, #8047FE 100%);
+        // color: $_btn_hover_primary_color;
+        background: $rosy-brown-800;
+        // border-color: $_btn-border_hover_primary;
+    }
+}
+
+
 ._is_rounded {
     border: 0;
     padding: 0;
@@ -420,7 +459,7 @@
 }
 
 ._is_large {
-    padding: 1rem 2.4rem;
+    width: 100%;
     font-size: $_button_large;
     line-height: $_button_large_line;
 
@@ -436,7 +475,7 @@
     line-height: $_button_small_line;
 
     img {
-        height: $_button_small;
+        height: 2.4rem;
     }
 }
 

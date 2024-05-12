@@ -1,0 +1,63 @@
+._product-support {
+    &_wrapper {
+        gap: 13rem;
+        display: flex;
+        padding-top: 8rem;
+        flex-direction: column;
+    }
+
+    &_head {
+        gap: 10rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_title {
+        color: $green;
+        text-align: center;
+    }
+
+    &_nav {
+        gap: 1rem;
+        margin: 0 auto;
+        display: flex;
+
+        &_item {
+            font-weight: 600;
+            cursor: pointer;
+            line-height: 2.8rem;
+            padding: 1.4rem 3.2rem;
+        }
+    }
+
+    &_body {
+        gap: 11.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_why-sizes {
+
+        &_key-point {
+            gap: 5px;
+            display: flex;
+            font-weight: 500;
+            font-size: 1.9rem;
+            
+            &_title {
+                color: $green;
+                font-weight: 600;
+            }
+
+            &_desc {
+
+            }
+
+            &s {
+                list-style-type: disc;
+                list-style-position: inside;
+            }
+        }
+    }
+
+}

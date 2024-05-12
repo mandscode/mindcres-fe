@@ -1,0 +1,103 @@
+._product_card {
+    gap: 8px;
+    display: flex;
+    cursor: pointer;
+    padding: 4.44px;
+    max-width: 43.057rem;
+    flex-direction: column;
+
+    &_media {
+        width: 40.69rem;
+        height: 50.138rem;
+        padding: 7.4px 7.4px 0;
+        border: 1px solid $rosy-brown-800;
+
+        img {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+    }
+
+    &_body {
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+        padding:0 11.84px;
+    }
+
+    &_info {
+        gap: 2rem;
+        display: flex;
+
+        &_text {
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            h6 {
+                height: 4rem;
+                color: $green;
+                overflow: hidden;
+                font-weight: 600;
+                line-height: 2rem;
+                font-size: 1.9rem;
+            }
+    
+            p {
+                color: $gray-800;
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+            }
+        }
+
+
+        &_price {
+            gap: 2px;
+            display: flex;
+            height: fit-content;
+
+            &_mrp {
+                font-size: 1.5rem;
+                color: $rosy-brown;
+                position: relative;
+                line-height: normal;
+                align-self: flex-end;
+                display: inline-block;
+
+                &::after {
+                    content: "";
+                    top: 50%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: red;
+                    position: absolute;
+                    display: inline-block;
+                    transform: translateY(-50%);
+                }
+            }
+            
+            &_offer {
+                display: flex;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                align-self: flex-end;
+                align-items: flex-end;
+
+                span {
+                    font-size: 3rem;
+                    line-height: 3rem;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    &_buttons {
+        gap: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}

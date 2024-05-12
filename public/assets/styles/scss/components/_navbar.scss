@@ -8,17 +8,29 @@
     }
 
     &_brand {
-        display: flex;
+        a {
+            display: flex;
+        }
     }
 
     &_links {
         gap: 0.8rem;
         display: flex;
-    }
 
+    }
+    
     &_link {
         color: $green;
         padding: 1rem;
         font-size: $_link_h2;
+        
+        a {
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                font-weight: 700;
+            }
+        }
+
     }
 }

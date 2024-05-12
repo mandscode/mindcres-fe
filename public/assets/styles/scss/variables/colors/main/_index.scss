@@ -15,7 +15,7 @@
 
 // for Sub Headings
     // Primary Colors
-        $_sub-title_default_color: var(--sub-title-default-color);
+        $_sub-title_default_color: $rosy-brown;
         $_sub-title_light_color: var(--sub-title-light-color);
         $_sub-title_dark_color:  var(--sub-title-dark-color);
         $_sub-title_primary_color:var(--sub-title-primary-color);
@@ -137,12 +137,12 @@
     
     // for Button backgrounds
         // Primary Colors
-            $_btn_default: var(--btn-default);
+            $_btn_default: transparent;
             $_btn_primary: $green;
             $_btn_disabled: rgb(49, 52, 75);
 
         //  Event background colors for default(Outline)
-            $_btn_hover_default: var(--btn-hover-default);
+            $_btn_hover_default: $rosy-brown-800;
             $_btn_focus_default: var(--btn-focus-default);
             $_btn_active_default: var(--btn-active-default);
 
@@ -155,11 +155,11 @@
     
     // for Button text colors
         // Primary text colors
-            $_btn_default_color: var(--btn-default-color);
+            $_btn_default_color: $rosy-brown-600;
             $_btn_primary_color: $white;
 
         //  Event text colors for default(Outline)
-            $_btn_hover_default_color: var(--btn-hover-default-color);
+            $_btn_hover_default_color: $green;
             $_btn_active_default_color: var(--btn-active-default-color);
             $_btn_focus_default_color: var( --btn-focus-default-color);
         
@@ -172,12 +172,12 @@
 
     // for Button borders
         // Primary border colors
-            $_btn-border_default: var(--btn-border-default);
+            $_btn-border_default: $rosy-brown-600;
             $_btn-border_primary: var(--btn-border-primary);
 
         //  Event border colors for default(Outline)
-            $_btn-border_active_default: var(--btn-border-hover-default);
-            $_btn-border_hover_default: var(--btn-border-active-default);
+            $_btn-border_active_default: $rosy-brown-600;
+            $_btn-border_hover_default: $rosy-brown-600;
             $_btn-border_focus_default: var(--btn-border-focus-default);
         
         //  Event border colors for primary buttons

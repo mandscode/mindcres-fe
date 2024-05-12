@@ -1,0 +1,119 @@
+._footer {
+    gap: 17rem;
+    display: grid;
+    background: $green;
+
+    &_wrapper {
+        gap: 20rem;
+        padding: 8rem 8rem 0;
+        display: flex;
+    }
+    
+    &_left {
+        flex: 1;
+    }
+    
+    &_form {
+        gap: 1.2rem;
+        display: flex;
+        flex-direction: column;
+
+        &_wrapper {
+            gap: 3.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_label {
+            font-weight: 700;
+            color: $rosy-brown-600;
+            font-family: $Merriweather;
+        }  
+        
+        input {
+            flex: 2;
+            color: $rosy-brown;
+            font-size: 1.9rem;
+            line-height: 1.5rem;
+            padding: 1.6rem 2.1rem;
+            border: 1px solid $rosy-brown;
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        &_button {
+            flex: 1;
+            height: inherit;
+            font-weight: 600;
+            font-size: 1.9rem;
+            padding: 1.2rem 5.65rem;
+        }
+    }
+
+    &_right {
+        flex: 2;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_col {
+        gap: 4rem;
+        display: flex;
+        flex-direction: column;
+
+        &_title {
+            font-weight: 400;
+            font-size: 2.8rem;
+            color: $rosy-brown-600;
+            font-family: $Merriweather;
+        }
+
+        &_items {
+            gap: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_item {
+            color: #fff;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1.9rem;
+            line-height: 1.9rem;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $rosy-brown;
+            }
+        }
+    }
+
+    &_bottom {
+        display: grid;
+        align-items: center;
+        padding-bottom: 2.5rem;
+        justify-content: center;
+    }
+
+    &_social {
+        gap: 1.8rem;
+        display: flex;
+
+        &_item {
+            // padding: 1.1rem;
+        }
+
+        svg {
+            &:hover {
+                path {
+                    &:not(._not_hover) {
+                        fill: #FFEECA;
+                    }
+                }
+            }
+
+        }
+    }
+}

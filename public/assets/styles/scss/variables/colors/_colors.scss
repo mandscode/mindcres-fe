@@ -1,12 +1,15 @@
 // Theme Color shades
     // Theme Default
         $white:   #ffffff;
-        $rosy-brown: #BAA989; //Tertiary Color
+        $rosy-brown: #BAA989; //Tertiary Color, 
+        $rosy-brown-800: #F3E0BF; //ProductCard-Border
+        $rosy-brown-500: #FFF9EC; //Why Snore hero section bg
+        $rosy-brown-600: #FFEECA; //FlipkartBuyButton
         // $blue:    #0056B3;
         // $indigo:  #6610f2;
         // $purple:  #6f42c1;
         // $pink:    #e83e8c;
-        // $red:     #A91E2C;
+        $red:     #ED2828;
         // $orange:  #fd7e14;
         // $yellow:  #F0B400;
         $green:   #005B4C;
@@ -15,7 +18,7 @@
         // $black   :#262833;
     // Theme Dark 
         // Shades of grey
-            // $light:    #ECF0F3; //white color define here for dark theme
+            $light:    #CCDEDB; //white color define here for dark theme
             // $dark    : #262833; //black color define here for dark theme
             // $dark-900: #31344b; //black color define here for dark theme
             // $gray-100: #f3f7fa;
@@ -26,6 +29,8 @@
             // $gray-600: #93a5be;   
             // $gray-700: #66799e;   
             $gray-800: #515151; //text   
+            $gray-100: #f6f6f6; //download section   
+            $gray-050: #f9f9f9; //text   
             // $gray-900: #44476A;
 
     // (These colors shades will be as whole website color list)

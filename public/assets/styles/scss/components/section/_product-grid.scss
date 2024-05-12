@@ -1,0 +1,22 @@
+._product-grid {
+    &_wrapper {
+        gap: 10rem;
+        display: flex;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        flex-direction: column;
+    }
+
+    &_info {
+        &_title {
+            color: $green;
+        }
+    }
+
+    &_list {
+        gap: 7.4rem;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

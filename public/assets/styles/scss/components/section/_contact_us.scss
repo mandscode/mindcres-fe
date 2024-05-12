@@ -1,0 +1,121 @@
+._contact_us {
+    &_wrapper {
+        gap: 16rem;
+        display: flex;
+        padding-top: 8.5rem;
+        flex-direction: column;
+        padding-bottom: 24.4rem;
+    }
+
+    &_title {
+        color: $green;
+        text-align: center;
+    }
+
+    &_body {
+        gap: 6.3rem;
+        display: flex;
+
+    }
+
+    &_info {
+        flex: 1;
+        gap: 11rem;
+        display: flex;
+        padding: 4rem 5rem;
+        flex-direction: column;
+        background-color: $green;
+
+        &_typo {
+            gap: 6px;
+            display: flex;
+            flex-direction: column;            
+        }
+
+        &_title {
+            color: #fff;
+            font-weight: 600;
+            font-size: 3.3rem;
+        }
+
+        &_desc {
+            color: $rosy-brown;
+        }
+    }
+
+    &_details {
+        gap: 5rem;
+        display: flex;
+        color: #fff;
+        flex-direction: column;
+
+        span {
+            gap: 2.5rem;
+            display: flex;
+            align-items: center;
+            
+            &:nth-child(3) {
+                align-items: self-start;
+            }
+
+            svg {
+                width: 2.4rem;
+                height: 2.4rem;
+                min-width: 2.4rem;
+            }
+        }
+    }
+
+    &_form {
+        flex: 2;
+        gap: 5rem;
+        display: flex;
+        flex-direction: column;
+        
+        &_title {
+            color: $green;
+            font-size: 3.3rem;
+            font-family: $Merriweather;
+        }
+
+        &_items {
+            gap: 5rem;
+            display: flex;
+            flex-direction: column;
+
+            input {
+                flex: 2;
+                color: $rosy-brown;
+                font-size: 1.9rem;
+                line-height: 1.5rem;
+                padding: 1.6rem 2.1rem;
+                border: 1.5px solid $rosy-brown;
+    
+                &:focus {
+                    outline: 0;
+                }
+            }
+
+            textarea {
+                flex: 2;
+                color: $rosy-brown;
+                font-size: 1.9rem;
+                min-height: 20rem;
+                line-height: 1.5rem;
+                padding: 1.6rem 2.1rem;
+                border: 1.5px solid $rosy-brown;
+    
+                &:focus {
+                    outline: 0;
+                }
+            }
+
+            button {
+                align-self: flex-end;
+                font-size: 2.3rem;
+                padding: 1.45rem 9.05rem;
+            }
+            
+        }
+    }
+}

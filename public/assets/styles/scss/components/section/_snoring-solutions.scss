@@ -1,0 +1,50 @@
+._snoring_solutions {
+    &_wrapper {
+        display: flex;
+        gap: 11.119rem;
+        padding-top: 17rem;
+        padding-bottom: 17rem;
+        flex-direction: column;
+    }
+
+    &_info {
+        &_title {
+            text-align: center;
+            color: $_sub-title_default_color;
+        }
+    }
+
+    &_options {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_option {
+        gap: 3.2rem;
+        display: grid;
+
+        &_media {
+            width: 28.128rem;
+            overflow: hidden;
+            height: 28.128rem;
+            border-radius: 50%;
+            border: 9.36px solid $rosy-brown-800;
+            &_item {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &_info {
+            text-align: center;
+
+            &_title {
+                display: block;
+                font-size: 1.9rem;
+                font-weight: 700;
+            }
+        }
+    }
+}
