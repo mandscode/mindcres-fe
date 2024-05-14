@@ -24,7 +24,7 @@ const PrivacyPolicies = () => {
                                 <h6 className="_privacy_policies_title">
                                     Information privacy
                                 </h6>
-                                <p className="_privacy_policies_typo">
+                                <div className="_privacy_policies_typo">
                                     <span>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et malesuada fames ac turpis. Ornare lectus sit amet est placerat in egestas. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Arcu cursus vitae congue mauris. 
                                     </span>
@@ -42,13 +42,13 @@ const PrivacyPolicies = () => {
                                         Vitae semper quis lectus nulla at volutpat diam ut venenatis. Quis ipsum suspendisse ultrices gravida dictum fusce ut. 
                                         </li>
                                     </ul>
-                                </p>
+                                </div>
                             </div>
                             <div className="_privacy_policies_content">
                                 <h6 className="_privacy_policies_title">
                                 Cookies 
                                 </h6>
-                                <p className="_privacy_policies_typo">
+                                <div className="_privacy_policies_typo">
                                     <ul>
                                         <li>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -66,13 +66,13 @@ const PrivacyPolicies = () => {
                                         Nec nam aliquam sem et tortor consequat id.
                                         </li>
                                     </ul>
-                                </p>
+                                </div>
                             </div>
                             <div className="_privacy_policies_content">
                                 <h6 className="_privacy_policies_title">
                                 Security 
                                 </h6>
-                                <p className="_privacy_policies_typo">
+                                <div className="_privacy_policies_typo">
                                     <ul>
                                         <li>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -90,13 +90,13 @@ const PrivacyPolicies = () => {
                                         Nec nam aliquam sem et tortor consequat id.
                                         </li>
                                     </ul>
-                                </p>
+                                </div>
                             </div>
                             <div className="_privacy_policies_content">
                                 <h6 className="_privacy_policies_title">
                                 Links to external sites
                                 </h6>
-                                <p className="_privacy_policies_typo">
+                                <div className="_privacy_policies_typo">
                                     <ul>
                                         <li>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -114,7 +114,7 @@ const PrivacyPolicies = () => {
                                         Nec nam aliquam sem et tortor consequat id.
                                         </li>
                                     </ul>
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>

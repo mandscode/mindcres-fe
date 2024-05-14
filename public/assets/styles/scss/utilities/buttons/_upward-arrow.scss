@@ -1,0 +1,22 @@
+._upward-arrow {
+    
+    &_wrapper {
+        border: 0;
+        right: 2rem;
+        bottom: 2rem;
+        display: flex;
+        width: 7.2rem;
+        height: 7.2rem;
+        position: fixed;
+        cursor: pointer;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+
+        svg {
+            width: auto;
+            height: 1.5rem;
+        }
+    }   
+}

@@ -71,6 +71,10 @@
         gap: 5rem;
         display: flex;
         flex-direction: column;
+
+        ._input_errors {
+            border: 1px solid red;
+        }
         
         &_title {
             color: $green;
