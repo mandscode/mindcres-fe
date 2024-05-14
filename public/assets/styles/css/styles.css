@@ -1863,11 +1863,13 @@ a {
   height: 100%;
   object-fit: cover;
   transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 ._banner_info {
   top: 50%;
   z-index: 3;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -1916,7 +1918,7 @@ a {
 ._banner_wrapper_active .overlay {
   background: rgba(255, 255, 255, 0.2);
 }
-._banner_wrapper_active .banner_info_wrapper {
+._banner_wrapper_active ._banner_info {
   opacity: 1;
 }
 
