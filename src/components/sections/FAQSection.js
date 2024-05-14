@@ -21,15 +21,13 @@ const FAQSection = ({product}) => {
         if (faqEntries) {
             let arr = [];
             const filteredFaqs = faqEntries.filter(faq => {
-                // console.log(faq.relatedProducts, product.productCode)
                return faq.relatedProducts.includes(product.productCode)
             });
             setFAQs(filteredFaqs)
         }
         
     }, [product]);
-    
-    console.log(faqs)
+
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;

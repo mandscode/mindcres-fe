@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 const SnoringSolutions = () => {
     return (
         <>
@@ -11,6 +13,7 @@ const SnoringSolutions = () => {
                     <ul className="_snoring_solutions_options">
                         <li className="_snoring_solutions_option">
                             <div className="_snoring_solutions_option_media">
+                                <Link to="/shop" className="_snoring_solutions_option_media-link"></Link>
                                 <img src="./assets/imgs/index/snoring_solutions_option_media_01.jpeg" className="_snoring_solutions_option_media_item"/>
                             </div>
                             <div className="_snoring_solutions_option_info">
@@ -19,6 +22,7 @@ const SnoringSolutions = () => {
                         </li>
                         <li className="_snoring_solutions_option">
                             <div className="_snoring_solutions_option_media">
+                                <Link to="/shop" className="_snoring_solutions_option_media-link"></Link>
                                 <img src="./assets/imgs/index/snoring_solutions_option_media_02.jpeg" className="_snoring_solutions_option_media_item"/>
                             </div>
                             <div className="_snoring_solutions_option_info">
@@ -27,6 +31,7 @@ const SnoringSolutions = () => {
                         </li>
                         <li className="_snoring_solutions_option">
                             <div className="_snoring_solutions_option_media">
+                                <Link to="/shop" className="_snoring_solutions_option_media-link"></Link>
                                 <img src="./assets/imgs/index/snoring_solutions_option_media_03.jpeg" className="_snoring_solutions_option_media_item"/>
                             </div>
                             <div className="_snoring_solutions_option_info">

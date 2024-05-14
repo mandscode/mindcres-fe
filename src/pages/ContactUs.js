@@ -1,4 +1,82 @@
+import { useState } from "react";
+
 const ContactUs = () => {
+    
+    // State variables for form fields and errors
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [errors, setErrors] = useState({});
+
+    // Validation function for email
+    const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
+    // Validation function for name
+    const validateName = (name) => {
+    return name.trim().length > 0;
+    };
+
+    // Validation function for message
+    const validateMessage = (message) => {
+    return message.trim().length > 0;
+    };
+
+    // Handle real-time validation
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        // Update state
+        if (name === 'name') setName(value);
+        if (name === 'email') setEmail(value);
+        if (name === 'message') setMessage(value);
+
+        // Validate input and update errors state
+        const newErrors = { ...errors };
+
+        if (name === 'name' && !validateName(value)) {
+            newErrors.name = true;
+        } else {
+            delete newErrors.name;
+        }
+
+        if (name === 'email' && !validateEmail(value)) {
+            newErrors.email = true;
+        } else {
+            delete newErrors.email;
+        }
+
+        if (name === 'message' && !validateMessage(value)) {
+            newErrors.message = true;
+        } else {
+            delete newErrors.message;
+        }
+
+        setErrors(newErrors);
+    };
+
+    // Handle form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Final validation checks
+        const newErrors = {};
+        if (!validateName(name)) newErrors.name = true;
+        if (!validateEmail(email)) newErrors.email = true;
+        if (!validateMessage(message)) newErrors.message = true;
+
+        // Set errors in state
+        setErrors(newErrors);
+
+        // If no errors, proceed with form submission
+        if (Object.keys(newErrors).length === 0) {
+            // Handle form submission logic here
+            console.log('Form submitted successfully!');
+        }
+    };
+
+
     return (
         <>
             <section className="_contact_us">
@@ -44,15 +122,28 @@ const ContactUs = () => {
                         </div>
                         <div className="_contact_us_form">
                             <h6 className="_contact_us_form_title">If you have any queries, write to us directly</h6>
-                            <form className="_contact_us_form_items">
+                            <form className="_contact_us_form_items" onSubmit={handleSubmit}>
                                 <input
                                     placeholder="Enter email"
+                                    value={email}
+                                    name="email"
+                                    onChange={handleChange}
+                                    className={errors.email ? '_input_errors' : ''}
                                 />
                                 <input
                                     placeholder="Name"
+                                    value={name}
+                                    name="name"
+                                    onChange={handleChange}
+                                    className={errors.name ? '_input_errors' : ''}
                                 />
                                 <textarea
+                                          name="message"
+
                                     placeholder="Write your message"
+                                    onChange={handleChange}
+
+                                    className={errors.message ? '_input_errors' : ''}
                                 />
                                 <button className="_button _is_primary _contact_us_form_button">
                                     Submit

@@ -13,11 +13,11 @@ const ProductCard = ({product}) => {
                 <div className="_product_card_body">
                     <div className="_product_card_info">
                         <div className="_product_card_info_text">
-                            <Link to={`/product-detail/${product.productId}`}>
                                 <h6>
+                                    <Link className="_product_card_link" to={`/product-detail/${product.productId}`}>
+                                    </Link>
                                     {product.productName}
                                 </h6>
-                            </Link>
                             <p>
                                 Your Snoring Solution for Restful Nights.
                             </p>
