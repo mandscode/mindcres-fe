@@ -12,8 +12,10 @@ const DetailedProductCard = () => {
     const { data, loading, error } = useSelector((state) => state.productsDetail);
 
     useEffect(() => {
-        const product = productsContent.find(product => product.relatedProductCode === productsDetail.productCode);
-        setProductContent(product);
+        if(productsContent) {
+            const product = productsContent.find(product => product.relatedProductCode === productsDetail.productCode);
+            setProductContent(product);
+        }
     }, [productsContent])
     
 
